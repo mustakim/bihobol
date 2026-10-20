@@ -1,13 +1,13 @@
 module.exports = {
     root: true,
     parser: '@typescript-eslint/parser',
-    parserOptionals: {
-        exmaVersion: 6,
+    parserOptions: {
+        ecmaVersion: 2020,
         sourceType: 'module',
         ecmaFeatures: { jsx: true }
     },
     extends: [
-        'prettier/@typescript-eslint',
+        'prettier',
         'plugin:prettier/recommended'
     ],
     globals: {

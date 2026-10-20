@@ -1,15 +1,15 @@
 import React from 'react'
 import Link, { LinkProps } from 'next/link'
 interface AppLinkProps extends LinkProps {
-    label: string
+  label: string
 }
 
-const AppLink: React.FC<AppLinkProps> = ({href, label}) => {
-    return (
-        <Link href={href}>
-            <a>{label}</a>
-        </Link>
-    )
+const AppLink: React.FC<AppLinkProps> = ({ href, label }) => {
+  return (
+    <Link href={href}>
+      <a>{label}</a>
+    </Link>
+  )
 }
 
 export default AppLink
