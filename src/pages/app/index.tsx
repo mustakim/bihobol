@@ -274,7 +274,6 @@ export const getStaticProps: GetStaticProps<AppsDirectoryProps> = async () => {
     props: {
       apps,
     },
-    revalidate: 3600,
   }
 }
 

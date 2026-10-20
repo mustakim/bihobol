@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_OPTIONS='-r ./node-compat.js' next dev",
-    "build": "NODE_OPTIONS='-r ./node-compat.js' next build",
+    "build": "NODE_OPTIONS='-r ./node-compat.js' next build && NODE_OPTIONS='-r ./node-compat.js' next export",
+    "export": "NODE_OPTIONS='-r ./node-compat.js' next export",
     "start": "NODE_OPTIONS='-r ./node-compat.js' next start",
     "lint": "eslint --ext .ts,.tsx --fix"
   },

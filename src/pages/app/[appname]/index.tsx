@@ -386,7 +386,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: false,
   }
 }
 
@@ -408,7 +408,6 @@ export const getStaticProps: GetStaticProps<AppOverviewProps> = async (context) 
       privacyData,
       termsData,
     },
-    revalidate: 3600,
   }
 }
 

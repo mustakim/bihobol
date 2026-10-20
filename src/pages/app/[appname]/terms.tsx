@@ -18,7 +18,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: false,
   }
 }
 
@@ -30,7 +30,6 @@ export const getStaticProps: GetStaticProps<TermsPageProps> = async (context) =>
     props: {
       docData,
     },
-    revalidate: 3600,
   }
 }
 

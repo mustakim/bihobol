@@ -18,8 +18,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    // fallback: 'blocking' ensures any new app slug or alias loads dynamically on first request
-    fallback: 'blocking',
+    fallback: false,
   }
 }
 
@@ -31,8 +30,6 @@ export const getStaticProps: GetStaticProps<PrivacyPolicyPageProps> = async (con
     props: {
       docData,
     },
-    // revalidate every hour for updated markdown content
-    revalidate: 3600,
   }
 }
 
