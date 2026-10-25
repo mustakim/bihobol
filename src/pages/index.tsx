@@ -280,17 +280,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured App Showcase: Math Adventure */}
+      {/* Featured App Showcase */}
       <section className="showcase-section">
         <div className="site-container">
           <div className="section-header">
-            <span className="section-tag">Featured Application</span>
+            <span className="section-tag">Featured Applications</span>
             <h2 className="section-title">
-              Meet <span className="gradient-text-accent">Math Adventure</span>
+              Engineered with <span className="gradient-text-accent">Care &amp; Purpose</span>
             </h2>
             <p className="section-description">
-              The flagship educational offline game developed by Kaniz Sultana (Bihobol). Designed
-              to build a deep love for mathematics through gamified curiosity.
+              Explore our mobile applications built for safe children's education and seamless daily
+              household collaboration.
             </p>
           </div>
 
@@ -386,6 +386,113 @@ export default function Home() {
                   <div className="badge-row">
                     <span className="badge badge-emerald">Google Play Families</span>
                     <span className="badge badge-glow">COPPA Verified</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Daily Bazar Showcase Card */}
+          <div className="showcase-card showcase-card-bazar">
+            <div className="showcase-card-grid">
+              <div className="showcase-left">
+                <div className="app-main-avatar avatar-bazar">
+                  <span>🛍️</span>
+                </div>
+                <div className="app-main-title">
+                  <h3>Daily Bazar</h3>
+                  <p className="app-author">By Bihobol</p>
+                </div>
+
+                <p className="showcase-body">
+                  Daily Bazar simplifies household grocery and market shopping by connecting
+                  partners in real time. Create shared bazar lists, invite family or roommates,
+                  watch items update live as someone shops in the market, and monitor household
+                  expenses transparently.
+                </p>
+
+                <div className="features-checklist">
+                  <div className="feat-item">
+                    <span className="feat-icon">⚡</span>
+                    <div>
+                      <strong>Real-Time Partner Sync:</strong> Instant list updates across all
+                      connected devices with sub-second synchronization.
+                    </div>
+                  </div>
+                  <div className="feat-item">
+                    <span className="feat-icon">👥</span>
+                    <div>
+                      <strong>Collaborative Bazar Lists:</strong> Easily invite partners, assign
+                      items, and check off groceries together.
+                    </div>
+                  </div>
+                  <div className="feat-item">
+                    <span className="feat-icon">📊</span>
+                    <div>
+                      <strong>Expense &amp; Budget Tracking:</strong> Track item prices, calculate
+                      market totals, and analyze monthly household food spending.
+                    </div>
+                  </div>
+                  <div className="feat-item">
+                    <span className="feat-icon">📶</span>
+                    <div>
+                      <strong>Offline-First Resilience:</strong> Check off items inside basement
+                      markets with zero cell signal; syncs automatically once back online.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="showcase-actions">
+                  <Link href="/app/daily-bazar">
+                    <a className="btn btn-primary">
+                      <span>View App Details</span>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </Link>
+                  <Link href="/app/daily-bazar/privacy-policy">
+                    <a className="btn btn-outline">Privacy Policy</a>
+                  </Link>
+                  <Link href="/app/daily-bazar/terms">
+                    <a className="btn btn-outline">Terms of Service</a>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="showcase-right">
+                <div className="security-card security-card-bazar">
+                  <h4>🤝 Real-Time Collaboration &amp; Trust</h4>
+                  <ul className="security-list">
+                    <li>
+                      <strong>Live Updates:</strong> Watch items marked bought in real-time as your
+                      partner navigates the bazar.
+                    </li>
+                    <li>
+                      <strong>Controlled Access:</strong> Invite partners via secure code or QR
+                      code; revoke access anytime.
+                    </li>
+                    <li>
+                      <strong>Zero Data Selling:</strong> Your family grocery habits and expenses
+                      remain private and are never monetized.
+                    </li>
+                    <li>
+                      <strong>Account &amp; List Deletion:</strong> Full data export and instant
+                      deletion per Google Play developer policies.
+                    </li>
+                  </ul>
+                  <div className="badge-row">
+                    <span className="badge badge-emerald">Real-Time Sync</span>
+                    <span className="badge badge-glow">Privacy First</span>
                   </div>
                 </div>
               </div>
@@ -816,6 +923,14 @@ export default function Home() {
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
         }
 
+        .showcase-card + .showcase-card {
+          margin-top: 40px;
+        }
+
+        .showcase-card-bazar {
+          border-color: rgba(16, 185, 129, 0.25);
+        }
+
         .showcase-card-grid {
           display: grid;
           grid-template-columns: 1.4fr 1fr;
@@ -836,6 +951,15 @@ export default function Home() {
           color: #ffffff;
           box-shadow: 0 8px 20px rgba(139, 92, 246, 0.35);
           margin-bottom: 12px;
+        }
+
+        .avatar-bazar {
+          background: linear-gradient(135deg, #10b981, #06b6d4, #3b82f6);
+          box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+        }
+
+        .security-card-bazar {
+          border-color: rgba(16, 185, 129, 0.25) !important;
         }
 
         .app-main-title h3 {
