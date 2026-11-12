@@ -122,4 +122,3 @@ const PlayStoreLink: React.FC<PlayStoreLinkProps> = ({
 }
 
 export default PlayStoreLink
-
