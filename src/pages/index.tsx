@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import PlayStoreLink from '../components/PlayStoreLink'
+
+const MATH_ADVENTURE_PLAY_URL =
+  'https://play.google.com/store/apps/details?id=com.bihobol.mathAdventure'
 
 export default function Home() {
   const [activeSubject, setActiveSubject] = useState<
@@ -89,6 +93,12 @@ export default function Home() {
                     </svg>
                   </a>
                 </Link>
+                <PlayStoreLink
+                  href={MATH_ADVENTURE_PLAY_URL}
+                  label="Get on Google Play"
+                  size="lg"
+                  variant="solid"
+                />
                 <Link href="/app">
                   <a className="btn btn-secondary btn-large">
                     <span>All Applications</span>
@@ -337,6 +347,11 @@ export default function Home() {
                 </div>
 
                 <div className="showcase-actions">
+                  <PlayStoreLink
+                    href={MATH_ADVENTURE_PLAY_URL}
+                    label="Get on Google Play"
+                    variant="solid"
+                  />
                   <Link href="/app/math-adventure">
                     <a className="btn btn-primary">
                       <span>View App Details</span>

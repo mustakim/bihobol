@@ -2,6 +2,7 @@ import React from 'react'
 import { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
+import PlayStoreLink from '../../components/PlayStoreLink'
 import { AppSummary, getAllAppsSummary } from '../../lib/apps'
 
 interface AppsDirectoryProps {
@@ -54,6 +55,14 @@ const AppsDirectoryPage: NextPage<AppsDirectoryProps> = ({ apps }) => {
                 </div>
 
                 <div className="app-card-actions">
+                  {app.playStoreUrl && (
+                    <PlayStoreLink
+                      href={app.playStoreUrl}
+                      label="Android App"
+                      size="sm"
+                      variant="solid"
+                    />
+                  )}
                   <Link href={`/app/${app.slug}`}>
                     <a className="btn btn-secondary btn-sm">Overview</a>
                   </Link>

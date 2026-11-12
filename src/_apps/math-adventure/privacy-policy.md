@@ -6,6 +6,7 @@ developer: "Kaniz Sultana (Bihobol)"
 lastUpdated: "October 21, 2026"
 effectiveDate: "October 21, 2026"
 supportEmail: "support@bihobol.com"
+playStoreUrl: "https://play.google.com/store/apps/details?id=com.bihobol.mathAdventure"
 ---
 
 # Privacy Policy for Math Adventure

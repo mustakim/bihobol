@@ -10,6 +10,7 @@ export interface AppDocFrontMatter {
   lastUpdated?: string
   effectiveDate?: string
   supportEmail?: string
+  playStoreUrl?: string
   [key: string]: any
 }
 
@@ -25,6 +26,7 @@ export interface AppSummary {
   slug: string
   appName: string
   packageName?: string
+  playStoreUrl?: string
   hasPrivacyPolicy: boolean
   hasTerms: boolean
   lastUpdated?: string
@@ -198,6 +200,8 @@ export function getAllAppsSummary(): AppSummary[] {
       slug: folder,
       appName: privacyData.frontMatter.appName || slugToDisplayName(folder),
       packageName: privacyData.frontMatter.packageName,
+      playStoreUrl:
+        privacyData.frontMatter.playStoreUrl || termsData.frontMatter.playStoreUrl || '',
       hasPrivacyPolicy: privacyData.found,
       hasTerms: termsData.found,
       lastUpdated: privacyData.frontMatter.lastUpdated || termsData.frontMatter.lastUpdated,

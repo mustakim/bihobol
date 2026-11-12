@@ -42,6 +42,6 @@ We are proud to strictly comply with the **Children's Online Privacy Protection 
 
 ## 3. Play Today
 
-Math Adventure is available now on Android (`com.bihobol.mathAdventure`). We invite parents, educators, and young explorers to try it out and share their thoughts with us.
+Math Adventure is available now on [Google Play for Android](https://play.google.com/store/apps/details?id=com.bihobol.mathAdventure) (`com.bihobol.mathAdventure`). We invite parents, educators, and young explorers to try it out and share their thoughts with us.
 
 If you have questions or feedback, reach out to us at [support@bihobol.com](mailto:support@bihobol.com).

@@ -2,6 +2,7 @@ import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 import Layout from '../../../components/Layout'
+import PlayStoreLink from '../../../components/PlayStoreLink'
 import {
   getAppDoc,
   getAppStaticPathsParams,
@@ -28,6 +29,7 @@ const AppOverviewPage: NextPage<AppOverviewProps> = ({
   const developer =
     privacyData.frontMatter.developer || termsData.frontMatter.developer || 'Bihobol'
   const supportEmail = privacyData.frontMatter.supportEmail || 'support@bihobol.com'
+  const playStoreUrl = privacyData.frontMatter.playStoreUrl || termsData.frontMatter.playStoreUrl
 
   return (
     <Layout
@@ -52,13 +54,18 @@ const AppOverviewPage: NextPage<AppOverviewProps> = ({
           {/* Main App Overview Card */}
           <div className="app-card glass-card">
             <div className="app-header">
-              <div className="app-icon">
-                <span>{appName.charAt(0)}</span>
+              <div className="app-header-info">
+                <div className="app-icon">
+                  <span>{appName.charAt(0)}</span>
+                </div>
+                <div>
+                  <h1 className="app-title">{appName}</h1>
+                  <p className="app-subtitle">Official App, Privacy &amp; Legal Compliance</p>
+                </div>
               </div>
-              <div>
-                <h1 className="app-title">{appName}</h1>
-                <p className="app-subtitle">Official App, Privacy &amp; Legal Compliance</p>
-              </div>
+              {playStoreUrl && (
+                <PlayStoreLink href={playStoreUrl} label="Get on Google Play" variant="solid" />
+              )}
             </div>
 
             <div className="meta-badges">
@@ -188,8 +195,16 @@ const AppOverviewPage: NextPage<AppOverviewProps> = ({
         .app-header {
           display: flex;
           align-items: center;
-          gap: 22px;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 20px;
           margin-bottom: 24px;
+        }
+
+        .app-header-info {
+          display: flex;
+          align-items: center;
+          gap: 22px;
         }
 
         .app-icon {

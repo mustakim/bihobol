@@ -4,6 +4,7 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import Header from './Header'
 import Footer from './Footer'
+import PlayStoreLink from './PlayStoreLink'
 import { AppDocData } from '../lib/apps'
 
 interface AppLegalLayoutProps {
@@ -161,6 +162,14 @@ export const AppLegalLayout: React.FC<AppLegalLayoutProps> = ({ docData }) => {
                 </div>
 
                 <div className="doc-actions">
+                  {frontMatter.playStoreUrl && (
+                    <PlayStoreLink
+                      href={frontMatter.playStoreUrl}
+                      label="Google Play"
+                      size="sm"
+                      variant="subtle"
+                    />
+                  )}
                   <button
                     onClick={handleCopyLink}
                     className="action-btn"

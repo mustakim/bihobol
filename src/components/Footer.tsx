@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import PlayStoreLink from './PlayStoreLink'
 
 interface FooterProps {}
 
@@ -41,6 +42,13 @@ const Footer: React.FC<FooterProps> = () => {
                 <Link href="/app/math-adventure">
                   <a>Math Adventure</a>
                 </Link>
+              </li>
+              <li>
+                <PlayStoreLink
+                  href="https://play.google.com/store/apps/details?id=com.bihobol.mathAdventure"
+                  label="Math Adventure (Android)"
+                  variant="inline"
+                />
               </li>
               <li>
                 <Link href="/app">
