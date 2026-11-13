@@ -392,23 +392,22 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Daily Bazar Showcase Card */}
-          <div className="showcase-card showcase-card-bazar">
+          {/* Needly Showcase Card */}
+          <div className="showcase-card showcase-card-needly">
             <div className="showcase-card-grid">
               <div className="showcase-left">
-                <div className="app-main-avatar avatar-bazar">
+                <div className="app-main-avatar avatar-needly">
                   <span>🛍️</span>
                 </div>
                 <div className="app-main-title">
-                  <h3>Daily Bazar</h3>
+                  <h3>Needly</h3>
                   <p className="app-author">By Bihobol</p>
                 </div>
 
                 <p className="showcase-body">
-                  Daily Bazar simplifies household grocery and market shopping by connecting
-                  partners in real time. Create shared bazar lists, invite family or roommates,
-                  watch items update live as someone shops in the market, and monitor household
-                  expenses transparently.
+                  Needly simplifies household grocery and daily essentials shopping by connecting
+                  partners in real time. Create shared need lists, invite family or roommates, watch
+                  items update live as someone shops, and monitor household expenses transparently.
                 </p>
 
                 <div className="features-checklist">
@@ -422,15 +421,15 @@ export default function Home() {
                   <div className="feat-item">
                     <span className="feat-icon">👥</span>
                     <div>
-                      <strong>Collaborative Bazar Lists:</strong> Easily invite partners, assign
-                      items, and check off groceries together.
+                      <strong>Collaborative Need Lists:</strong> Easily invite partners, assign
+                      items, and check off groceries and essentials together.
                     </div>
                   </div>
                   <div className="feat-item">
                     <span className="feat-icon">📊</span>
                     <div>
                       <strong>Expense &amp; Budget Tracking:</strong> Track item prices, calculate
-                      market totals, and analyze monthly household food spending.
+                      shopping totals, and analyze monthly household spending.
                     </div>
                   </div>
                   <div className="feat-item">
@@ -443,7 +442,7 @@ export default function Home() {
                 </div>
 
                 <div className="showcase-actions">
-                  <Link href="/app/daily-bazar">
+                  <Link href="/app/needly">
                     <a className="btn btn-primary">
                       <span>View App Details</span>
                       <svg
@@ -460,22 +459,22 @@ export default function Home() {
                       </svg>
                     </a>
                   </Link>
-                  <Link href="/app/daily-bazar/privacy-policy">
+                  <Link href="/app/needly/privacy-policy">
                     <a className="btn btn-outline">Privacy Policy</a>
                   </Link>
-                  <Link href="/app/daily-bazar/terms">
+                  <Link href="/app/needly/terms">
                     <a className="btn btn-outline">Terms of Service</a>
                   </Link>
                 </div>
               </div>
 
               <div className="showcase-right">
-                <div className="security-card security-card-bazar">
+                <div className="security-card security-card-needly">
                   <h4>🤝 Real-Time Collaboration &amp; Trust</h4>
                   <ul className="security-list">
                     <li>
                       <strong>Live Updates:</strong> Watch items marked bought in real-time as your
-                      partner navigates the bazar.
+                      partner navigates the market.
                     </li>
                     <li>
                       <strong>Controlled Access:</strong> Invite partners via secure code or QR
@@ -927,6 +926,7 @@ export default function Home() {
           margin-top: 40px;
         }
 
+        .showcase-card-needly,
         .showcase-card-bazar {
           border-color: rgba(16, 185, 129, 0.25);
         }
@@ -953,11 +953,13 @@ export default function Home() {
           margin-bottom: 12px;
         }
 
+        .avatar-needly,
         .avatar-bazar {
           background: linear-gradient(135deg, #10b981, #06b6d4, #3b82f6);
           box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
         }
 
+        .security-card-needly,
         .security-card-bazar {
           border-color: rgba(16, 185, 129, 0.25) !important;
         }

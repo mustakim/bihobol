@@ -132,7 +132,7 @@ const ContactPage: React.FC = () => {
                           onChange={(e) => setFormState({ ...formState, app: e.target.value })}
                         >
                           <option value="math-adventure">Math Adventure</option>
-                          <option value="daily-bazar">Daily Bazar</option>
+                          <option value="needly">Needly</option>
                           <option value="general">General Inquiry</option>
                           <option value="privacy">Privacy &amp; Data Rights</option>
                           <option value="partnership">Partnership</option>

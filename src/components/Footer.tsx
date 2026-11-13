@@ -34,8 +34,8 @@ const Footer: React.FC<FooterProps> = () => {
             <h4 className="footer-heading">Applications</h4>
             <ul className="footer-links">
               <li>
-                <Link href="/app/daily-bazar">
-                  <a>Daily Bazar</a>
+                <Link href="/app/needly">
+                  <a>Needly</a>
                 </Link>
               </li>
               <li>
@@ -56,13 +56,13 @@ const Footer: React.FC<FooterProps> = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/app/daily-bazar/privacy-policy">
-                  <a>Daily Bazar Privacy</a>
+                <Link href="/app/needly/privacy-policy">
+                  <a>Needly Privacy</a>
                 </Link>
               </li>
               <li>
-                <Link href="/app/daily-bazar/terms">
-                  <a>Daily Bazar Terms</a>
+                <Link href="/app/needly/terms">
+                  <a>Needly Terms</a>
                 </Link>
               </li>
             </ul>

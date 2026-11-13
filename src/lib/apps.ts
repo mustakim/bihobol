@@ -35,6 +35,14 @@ export interface AppSummary {
 const APPS_DIR = path.join(process.cwd(), 'src/_apps')
 
 /**
+ * Backward compatibility alias mappings for rebranded apps
+ */
+const APP_ALIASES: Record<string, string> = {
+  'daily-bazar': 'needly',
+  dailybazar: 'needly',
+}
+
+/**
  * Normalizes an app slug:
  * e.g. "Math Adventure" -> "math-adventure"
  *      "mathAdventure"  -> "math-adventure"
@@ -84,6 +92,9 @@ export function resolveAppDirectory(appname: string): string | null {
   }
 
   const targetNormalized = normalizeSlug(appname)
+  if (APP_ALIASES[targetNormalized]) {
+    return APP_ALIASES[targetNormalized]
+  }
   for (const folder of folders) {
     if (normalizeSlug(folder) === targetNormalized) {
       return folder
@@ -119,6 +130,13 @@ export function getAppStaticPathsParams(): { appname: string }[] {
       .join('')
     if (camel !== folder && !paths.some((p) => p.appname === camel)) {
       paths.push({ appname: camel })
+    }
+  })
+
+  // Add backward-compatible aliases
+  Object.keys(APP_ALIASES).forEach((alias) => {
+    if (!paths.some((p) => p.appname === alias)) {
+      paths.push({ appname: alias })
     }
   })
 
